@@ -3,42 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <title>すしすきー大学 - 学校紹介</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?ver=0.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- ヘッダー -->
   <header>
-    <h1>すしすきー大学</h1>
+    <img class="header-logo" src="assets/logo.png">
+    <button class="nav-toggle" aria-label="メニューを開閉">
+        <!-- 見た目を作るための3本線要素。アイコンはspanの数で調整します -->
+        <span class="hamburger bar1"></span>
+        <span class="hamburger bar2"></span>
+        <span class="hamburger bar3"></span>
+    </button>
     <nav>
-      <ul>
-        <li><a href="index.html">トップ</a></li>
-        <li><a href="about.html">学校紹介</a></li>
-        <li><a href="departments.html">学科紹介</a></li>
-        <li><a href="school_life.html">スクールライフ紹介</a></li>
-        <li><a href="staff.html">教職員紹介</a></li>
-        <li><a href="prospective_students.html">受験生の方へ</a></li>
-        <li><a href="faculty.html">教職員・在校生の方へ</a></li>
-      </ul>
+        <ul>
+            <li><a href="index.html" class="stick-regular">トップ</a></li>
+            <li><a href="about.html" class="stick-regular">学校紹介</a></li>
+            <li><a href="departments.html" class="stick-regular">学科紹介</a></li>
+            <li><a href="school_life.html" class="stick-regular">スクールライフ</a></li>
+            <li><a href="staff.html" class="stick-regular">教職員紹介</a></li>
+            <li><a href="prospective_students.html" class="stick-regular">受験生の方へ</a></li>
+            <li><a href="faculty.html" class="stick-regular">教職員・在校生の方へ</a></li>
+        </ul>
     </nav>
-  </header>
+    <!-- ▼ ハンバーガーメニューを開閉するためのJS -->
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const nav = document.querySelector('nav');
+
+        navToggle.addEventListener('click', () => {
+            // メニューの開閉
+            nav.classList.toggle('open');
+
+            // ボタン自体にも .open クラスを付け外し
+            navToggle.classList.toggle('open');
+        });
+    </script>
+</header>
 
   <!-- メインコンテンツ -->
   <main>
-    <h2>学校紹介</h2>
-    <p>すしすきー大学は、寿司を愛する人々によって設立された（という設定の）架空大学です。</p>
-    <p>キャンパスは「インターネットのどこか」にあり、学内ではいつでも寿司が食べ放題（？）です。</p>
-    <p>
-      <strong>建学の精神：</strong>  
-      <br>寿司を愛し、人を愛し、世界を愛する。
-    </p>
+    <h2>準備中</h2>
   </main>
 
   <!-- フッター -->
   <footer>
+    <ul>
+        <li><a href="index.html" class="stick-regular">トップ</a></li>
+        <li><a href="about.html" class="stick-regular">学校紹介</a></li>
+        <li><a href="departments.html" class="stick-regular">学科紹介</a></li>
+        <li><a href="school_life.html" class="stick-regular">スクールライフ</a></li>
+        <li><a href="staff.html" class="stick-regular">教職員紹介</a></li>
+        <li><a href="prospective_students.html" class="stick-regular">受験生の方へ</a></li>
+        <li><a href="faculty.html" class="stick-regular">教職員・在校生の方へ</a></li>
+    </ul>
     <p>&copy; 2025 すしすきー大学</p>
     <p>※このサイトはジョークサイトです。実在の大学とは関係ありません。</p>
-  </footer>
+</footer>
 
 </body>
 </html>

@@ -3,39 +3,324 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-  }
-  
-  /* ヘッダーのスタイル */
-  header {
-    background-color: #eee;
-    padding: 1rem;
-  }
-  header h1 {
+}
+
+/* ヘッダーのスタイル */
+header {
+    position: relative;
+    background-color: #fff;
+    padding: 0;
+}
+
+header h1 {
     margin: 0;
-  }
-  nav ul {
+}
+
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-  }
-  nav li {
-    margin-right: 1em;
-  }
-  nav a {
+    transition: 0.3s;
+}
+
+nav li {
+    padding: 10px;
+    background-color: #eee;
+}
+
+nav li:hover {
+    background-color: #fdb;
+}
+
+nav a {
     text-decoration: none;
-  }
-  
-  /* メインコンテンツ */
-  main {
-    padding: 1rem;
-  }
-  
-  /* フッター */
-  footer {
+    color: #f73;
+}
+
+/* メインコンテンツ */
+main {
+    padding: 0;
+}
+
+/* フッター */
+footer {
     background-color: #eee;
     padding: 1rem;
     text-align: center;
     font-size: 0.9rem;
-  }
-  
+    margin-top: 2rem;
+}
+
+footer ul {
+    list-style: none;
+    text-align: left;
+    color: #f73;
+    display: none;
+}
+
+footer ul a {
+    color: #f73;
+}
+
+.image-div {
+    position: relative;
+}
+
+.top-image {
+    width: 100%;
+    display: block;
+}
+
+.image-div h2 {
+    font-size: 50px;
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    text-align: center;
+    margin: 0;
+    background-color: #fff7;
+}
+
+.header-logo {
+    width: 400px;
+}
+
+.map-img {
+    width: 400px;
+    max-width: 90%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+@media screen and (max-width:450px) {
+    .header-logo {
+        width: calc(100% - 60px);
+    }
+
+    .top-image {
+        height: 500px;
+        object-fit: cover;
+        object-position: top;
+    }
+}
+
+@media screen and (min-width:801px) and (max-width:1250px) {
+    .top-image {
+        height: 600px;
+        object-fit: cover;
+        object-position: top;
+    }
+}
+
+@media screen and (min-width:1251px) {
+    .top-image {
+        height: 50vw;
+        object-fit: cover;
+        object-position: top;
+    }
+}
+
+/* ハンバーガーボタン（デフォルトは非表示にしておき、モバイルで表示） */
+.nav-toggle {
+    display: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* 3本線共通の見た目 */
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #333;
+    transition: 0.3s;
+    /* 変形のアニメーション */
+}
+
+/* 3本線を個別に扱いやすいようクラス分けしているが、自由につけてもOK */
+.bar1,
+.bar2,
+.bar3 {
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* .nav-toggle.open 時(=メニュー開状態)の線の変形 */
+/* 上の線を右斜め下へ45度回転＋少し移動して重なるように */
+.nav-toggle.open .bar1 {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+/* 中央の線は非表示（消すor透明にする） */
+.nav-toggle.open .bar2 {
+    opacity: 0;
+}
+
+/* 下の線を右斜め上へ-45度回転＋少し移動して重なるように */
+.nav-toggle.open .bar3 {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* 小さい画面のときに適用するメディアクエリ */
+@media screen and (max-width: 768px) {
+
+    /* ハンバーガーボタンを表示 */
+    .nav-toggle {
+        display: block;
+    }
+
+    /* ulは折りたたみ用に display:block; にしておく(=高さ可変) */
+    nav ul {
+        display: block;
+        /* 重要: heightやautoはtransitionできないためmax-heightを使う */
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        /* 高さが増えないように調整 */
+        transition: max-height 0.3s ease-out;
+        /* ゆっくり下がる */
+    }
+
+    nav li {
+        margin: 0.5rem 0;
+    }
+
+    /* nav に .open が付いたら表示する */
+    nav.open ul {
+        max-height: 500px;
+        /* メニュー全体が収まる程度の値にしておく */
+        /* ハンバーガークリックでメニュー表示 */
+    }
+
+    footer ul {
+        display: block;
+    }
+}
+
+.stick-regular {
+    font-family: "Stick", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* ▼ ニュースセクション全体 */
+.news-section {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+}
+
+.news-section h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* ▼ ニュース一覧（リスト） */
+.news-list {
+    display: flex;
+    /* 横並びにしたい場合 */
+    flex-direction: column;
+    /* 縦並びなら column */
+    gap: 1rem;
+    /* アイテム間の隙間 */
+}
+
+/* ▼ ニュース1件（カード） */
+.news-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+/* タイトル */
+.news-title {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.news-title a {
+    color: #333;
+    text-decoration: none;
+}
+
+.news-title a:hover {
+    text-decoration: underline;
+}
+
+/* 日付やカテゴリーなどのメタ情報 */
+.news-meta {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+/* 要約 */
+.news-summary {
+    margin: 0.5rem 0 0;
+}
+
+/* ▼ 記事詳細ページのスタイル例 */
+.news-detail {
+    margin: 1rem auto;
+    max-width: 700px;
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.news-detail .news-title {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.news-detail .news-meta {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.news-detail img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+/* リンク欄の基本デザイン */
+.links-section {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f0f8ff;
+    /* 例: 薄い色をつける */
+    border-radius: 4px;
+}
+
+.links-section h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+/* リンクリストのスタイル */
+.links-section ul {
+    list-style-type: none;
+    /* リストマーカーを消す例 */
+    margin: 0;
+    padding: 0;
+}
+
+.links-section li {
+    margin-bottom: 1rem;
+}
+
+.links-section a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+.links-section a:hover {
+    text-decoration: underline;
+}

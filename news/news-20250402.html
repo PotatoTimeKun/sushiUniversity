@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>【ニュース詳細】すしすきー大学が開校されました - すしすきー大学</title>
+  <link rel="stylesheet" href="../style.css?ver=0.0"> <!-- 親フォルダにあるCSSを読み込み -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ヘッダー (共通) -->
+<header>
+    <img class="header-logo" src="../assets/logo.png">
+    <button class="nav-toggle" aria-label="メニューを開閉">
+        <!-- 見た目を作るための3本線要素。アイコンはspanの数で調整します -->
+        <span class="hamburger bar1"></span>
+        <span class="hamburger bar2"></span>
+        <span class="hamburger bar3"></span>
+    </button>
+  <nav>
+    <ul>
+      <li><a href="../index.html" class="stick-regular">トップ</a></li>
+      <li><a href="../about.html" class="stick-regular">学校紹介</a></li>
+      <li><a href="../departments.html" class="stick-regular">学科紹介</a></li>
+      <li><a href="../school_life.html" class="stick-regular">スクールライフ紹介</a></li>
+      <li><a href="../staff.html" class="stick-regular">教職員紹介</a></li>
+      <li><a href="../prospective_students.html" class="stick-regular">受験生の方へ</a></li>
+      <li><a href="../faculty.html" class="stick-regular">教職員・在校生の方へ</a></li>
+    </ul>
+  </nav>
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('nav');
+  
+    navToggle.addEventListener('click', () => {
+      // メニューの開閉
+      nav.classList.toggle('open');
+  
+      // ボタン自体にも .open クラスを付け外し
+      navToggle.classList.toggle('open');
+    });
+  </script>
+</header>
+
+<!-- メインコンテンツ -->
+<main>
+  <article class="news-detail">
+    <h2 class="news-title">すしすきー大学が開校されました</h2>
+    <div class="news-meta">
+      <time datetime="2025-04-02">2025年4月2日</time>
+    </div>
+
+    <p>
+      2025年、ついにすしすきー大学がくちばし校長によって開校されました。<br>
+      4月2日に行われた開校式では、くちばし校長からの演説(台本はChatGPTによる)や、関係者様へのお礼としてイズティ副校長によるベジマイト試食会が行われました。
+    </p>
+
+    <p>
+      これからすしすきー大学では、「見て、握って、食べる。」をモットーに、様々な生徒にすし握りやアンコリーノの教えを伝え、豊かな食を作り上げていきます。
+    </p>
+
+    <img src="../assets/top.png" alt="校舎の写真">
+
+    <p>
+        このサイトは、ChatGPTを使用し、弊校所属の塩ポテト教授によって作っていただきました。
+    </p>
+
+    <!-- 記事の最後に戻るリンクなど -->
+    <p>
+      <a href="../index.html">&laquo; トップページへ戻る</a>
+    </p>
+  </article>
+</main>
+
+<!-- フッター (共通) -->
+<footer>
+  <p>&copy; 2025 すしすきー大学</p>
+  <p>※このサイトはジョークサイトです。実在の大学とは関係ありません。</p>
+</footer>
+
+</body>
+</html>
