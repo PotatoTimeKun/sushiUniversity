@@ -1,0 +1,41 @@
+/* body全体の余白とフォント設定 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  
+  /* ヘッダーのスタイル */
+  header {
+    background-color: #eee;
+    padding: 1rem;
+  }
+  header h1 {
+    margin: 0;
+  }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  nav li {
+    margin-right: 1em;
+  }
+  nav a {
+    text-decoration: none;
+  }
+  
+  /* メインコンテンツ */
+  main {
+    padding: 1rem;
+  }
+  
+  /* フッター */
+  footer {
+    background-color: #eee;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
