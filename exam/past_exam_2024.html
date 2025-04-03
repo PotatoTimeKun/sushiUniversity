@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>すしすきー大学 - 過去問</title>
+    <link rel="stylesheet" href="../style.css?ver=0.1"> <!-- 親フォルダにあるCSSを読み込み -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/emblem.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ヘッダー (共通) -->
+    <header>
+        <img class="header-logo" src="../assets/logo.png">
+        <button class="nav-toggle" aria-label="メニューを開閉">
+            <!-- 見た目を作るための3本線要素。アイコンはspanの数で調整します -->
+            <span class="hamburger bar1"></span>
+            <span class="hamburger bar2"></span>
+            <span class="hamburger bar3"></span>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="../index.html" class="stick-regular">トップ</a></li>
+                <li><a href="../about.html" class="stick-regular">学校紹介</a></li>
+                <li><a href="../departments.html" class="stick-regular">学科紹介</a></li>
+                <li><a href="../school_life.html" class="stick-regular">スクールライフ紹介</a></li>
+                <li><a href="../staff.html" class="stick-regular">教職員紹介</a></li>
+                <li><a href="../prospective_students.html" class="stick-regular">受験生の方へ</a></li>
+                <li><a href="../faculty.html" class="stick-regular">教職員・在校生の方へ</a></li>
+            </ul>
+        </nav>
+        <script>
+            const navToggle = document.querySelector('.nav-toggle');
+            const nav = document.querySelector('nav');
+
+            navToggle.addEventListener('click', () => {
+                // メニューの開閉
+                nav.classList.toggle('open');
+
+                // ボタン自体にも .open クラスを付け外し
+                navToggle.classList.toggle('open');
+            });
+        </script>
+    </header>
+
+    <!-- 書き方
+ 問題を形式に従って書く、問題文のQ◯とinputのq◯を変え忘れないようにする
+ ANSWERSの問題番号、回答、点数を設定
+ PASS_THRESHOLDで合格ラインを設定
+ SNSシェアの文章とURLを設定
+-->
+
+    <main>
+        <h2>2024年度一般試験過去問</h2>
+        <p>制作者:塩ポテト君</p>
+
+        <form id="examForm">
+            <!-- Q1 -->
+            <div class="question-block">
+
+                <h3>Q1. 以下の菓子の名称を答えよ（配点: 100点）</h3>
+                <img src="../assets/exam/2024_1.png"><br>
+                <label>
+                    <input type="radio" name="q1" value="A" />
+                    A. 今川焼き
+                </label><br />
+                <label>
+                    <input type="radio" name="q1" value="B" />
+                    B. 回転焼き
+                </label><br />
+                <label>
+                    <input type="radio" name="q1" value="C" />
+                    C. アンコリーノ
+                </label><br />
+                <label>
+                    <input type="radio" name="q1" value="D" />
+                    D. おやき
+                </label>
+            </div>
+
+            <!-- Q2 -->
+            <div class="question-block">
+                <h3>Q2. モデレータでない人物を選べ（配点: 2点）</h3>
+                <label>
+                    <input type="radio" name="q2" value="A" />
+                    A. DELTA
+                </label><br />
+                <label>
+                    <input type="radio" name="q2" value="B" />
+                    B. くちばし
+                </label><br />
+                <label>
+                    <input type="radio" name="q2" value="C" />
+                    C. 兎亜
+                </label><br />
+                <label>
+                    <input type="radio" name="q2" value="D" />
+                    D. シマエナガ
+                </label>
+            </div>
+
+            <!-- Q3 -->
+            <div class="question-block">
+                <h3>Q3. くちばしの髪留めとして正しいものを選べ（配点: 1点）</h3>
+                <label>
+                    <input type="radio" name="q3" value="A" />
+                    A. 寿司の模型
+                </label><br />
+                <label>
+                    <input type="radio" name="q3" value="B" />
+                    B. 「す」の文字
+                </label><br />
+                <label>
+                    <input type="radio" name="q3" value="C" />
+                    C. アンコリーノ違反者の生首
+                </label><br />
+                <label>
+                    <input type="radio" name="q3" value="D" />
+                    D. 赤いリボン
+                </label>
+            </div>
+
+            <div class="question-block">
+                <h3>Q4. AIポテト君が発言していないものを選べ（配点: 2点）</h3>
+                <label>
+                    <input type="radio" name="q4" value="A" />
+                    A. あっ調理される
+                </label><br />
+                <label>
+                    <input type="radio" name="q4" value="B" />
+                    B. ぼくだよ殺すぞ
+                </label><br />
+                <label>
+                    <input type="radio" name="q4" value="C" />
+                    C. おちんちんちわ～
+                </label><br />
+                <label>
+                    <input type="radio" name="q4" value="D" />
+                    D. アイス許可する
+                </label>
+            </div>
+
+            <div class="question-block">
+                <h3>Q5. ボールプニの意味を答えよ（配点: 1点）</h3>
+                <label>
+                    <input type="radio" name="q5" value="A" />
+                    A. ぷにぷにしたボール
+                </label><br />
+                <label>
+                    <input type="radio" name="q5" value="B" />
+                    B. ボールをぷにぷにする
+                </label><br />
+                <label>
+                    <input type="radio" name="q5" value="C" />
+                    C. ボール型のプニ
+                </label><br />
+                <label>
+                    <input type="radio" name="q5" value="D" />
+                    D. ボールペン
+                </label>
+            </div>
+
+            <div class="question-block">
+                <h3>Q6. レジスタンスとは何か（配点: 2点）</h3>
+                <label>
+                    <input type="radio" name="q6" value="A" />
+                    A. アンコリーノ対抗勢力
+                </label><br />
+                <label>
+                    <input type="radio" name="q6" value="B" />
+                    B. スパム集団
+                </label><br />
+                <label>
+                    <input type="radio" name="q6" value="C" />
+                    C. ベジマイトを拒否する人
+                </label><br />
+                <label>
+                    <input type="radio" name="q6" value="D" />
+                    D. レジ打ちする人
+                </label>
+            </div>
+
+            <div class="question-block">
+                <h3>Q7. すしすきーが開設されたのはいつか（配点: 2点）</h3>
+                <label>
+                    <input type="radio" name="q7" value="A" />
+                    A. 2023年
+                </label><br />
+                <label>
+                    <input type="radio" name="q7" value="B" />
+                    B. 2021年
+                </label><br />
+                <label>
+                    <input type="radio" name="q7" value="C" />
+                    C. 2018年
+                </label><br />
+                <label>
+                    <input type="radio" name="q7" value="D" />
+                    D. 2020年
+                </label>
+            </div>
+
+            <div class="question-block">
+                <h3>Q8. 初心者マークのロールが付くのは登録から何日目までか（配点: 1点）</h3>
+                <label>
+                    <input type="radio" name="q8" value="A" />
+                    A. 1日目
+                </label><br />
+                <label>
+                    <input type="radio" name="q8" value="B" />
+                    B. 3日目
+                </label><br />
+                <label>
+                    <input type="radio" name="q8" value="C" />
+                    C. 5日目
+                </label><br />
+                <label>
+                    <input type="radio" name="q8" value="D" />
+                    D. 7日目
+                </label>
+            </div>
+
+            <div class="question-block">
+                <h3>Q9. ロールを取得時期順に並べたものはどれか（配点: 1点）</h3>
+                <label>
+                    <input type="radio" name="q9" value="A" />
+                    A. 豆腐,初心者,ヨッシー,キリン,メンダコ,赤皿,緑皿
+                </label><br />
+                <label>
+                    <input type="radio" name="q9" value="B" />
+                    B. 初心者,豆腐,メンダコ,キリン,ヨッシー,赤皿,緑皿
+                </label><br />
+                <label>
+                    <input type="radio" name="q9" value="C" />
+                    C. 豆腐,初心者,キリン,ヨッシー,メンダコ,緑皿,赤皿
+                </label><br />
+                <label>
+                    <input type="radio" name="q9" value="D" />
+                    D. 豆腐,初心者,キリン,ヨッシー,メンダコ,赤皿,緑皿
+                </label>
+            </div>
+
+            <div class="question-block">
+                <h3>Q10. しばいてくれるのは誰か（配点: 2点）</h3>
+                <label>
+                    <input type="radio" name="q10" value="A" />
+                    A. シバキング
+                </label><br />
+                <label>
+                    <input type="radio" name="q10" value="B" />
+                    B. 御前田 芝区
+                </label><br />
+                <label>
+                    <input type="radio" name="q10" value="C" />
+                    C. 御前尾 芝区
+                </label><br />
+                <label>
+                    <input type="radio" name="q10" value="D" />
+                    D. DELTA
+                </label>
+            </div>
+
+            <div class="question-block">
+                <h3>Q11. AIポテト君の機能として存在しないものを選べ（配点: 2点）</h3>
+                <label>
+                    <input type="radio" name="q11" value="A" />
+                    A. リバーシ機能
+                </label><br />
+                <label>
+                    <input type="radio" name="q11" value="B" />
+                    B. クリップ機能
+                </label><br />
+                <label>
+                    <input type="radio" name="q11" value="C" />
+                    C. リアクション機能
+                </label><br />
+                <label>
+                    <input type="radio" name="q11" value="D" />
+                    D. ダジャレ機能
+                </label>
+            </div>
+
+            <div class="question-block">
+                <h3>Q12. くちばしが作って投稿したことがあるものを答えよ（配点: 1点）</h3>
+                <label>
+                    <input type="radio" name="q12" value="A" />
+                    A. 青い焼き肉
+                </label><br />
+                <label>
+                    <input type="radio" name="q12" value="B" />
+                    B. 青い親子丼
+                </label><br />
+                <label>
+                    <input type="radio" name="q12" value="C" />
+                    C. 虹色のカレー
+                </label><br />
+                <label>
+                    <input type="radio" name="q12" value="D" />
+                    D. 金色のフリスビー丼
+                </label>
+            </div>
+
+            <div class="question-block">
+                <h3>Q13. ハンバーグもぐもぐザウルスの名言はどれか（配点: 1点）</h3>
+                <label>
+                    <input type="radio" name="q13" value="A" />
+                    A. うんちの値、うん値
+                </label><br />
+                <label>
+                    <input type="radio" name="q13" value="B" />
+                    B. おちんちんちわ～
+                </label><br />
+                <label>
+                    <input type="radio" name="q13" value="C" />
+                    C. チンチンのポエム チンポエム
+                </label><br />
+                <label>
+                    <input type="radio" name="q13" value="D" />
+                    D. ワニクリック詐欺
+                </label>
+            </div>
+
+            <div class="question-block">
+                <h3>Q14. にゃんぷっぷー無料回収サービスの目的はどれか（配点: 1点）</h3>
+                <label>
+                    <input type="radio" name="q14" value="A" />
+                    A. 保護
+                </label><br />
+                <label>
+                    <input type="radio" name="q14" value="B" />
+                    B. 虐待
+                </label><br />
+                <label>
+                    <input type="radio" name="q14" value="C" />
+                    C. 転売
+                </label><br />
+                <label>
+                    <input type="radio" name="q14" value="D" />
+                    D. 根絶
+                </label>
+            </div>
+
+            <div class="question-block">
+                <h3>Q15. 存在しない絵文字はどれか（配点: 2点）</h3>
+                <label>
+                    <input type="radio" name="q15" value="A" />
+                    A. ペンギンスチーマー
+                </label><br />
+                <label>
+                    <input type="radio" name="q15" value="B" />
+                    B. ださい...
+                </label><br />
+                <label>
+                    <input type="radio" name="q15" value="C" />
+                    C. ばばばばばえおうぃおい〜べべべべべべべべべえべえええべ
+                </label><br />
+                <label>
+                    <input type="radio" name="q15" value="D" />
+                    D. ケキキチーン
+                </label>
+            </div>
+
+            <div class="question-block">
+                <h3>Q16. 空欄に当てはまる言葉はどれか（配点: 2点）</h3>
+                <p>[&emsp;&emsp;]一つだけの写真を見て一つだけで写真撮られるなんて高級な[&emsp;&emsp;]なんだな…とか思ってたらカヌレっていう食い物だったらしい</p>
+                <label>
+                    <input type="radio" name="q16" value="A" />
+                    A. ちくわ
+                </label><br />
+                <label>
+                    <input type="radio" name="q16" value="B" />
+                    B. バウムクーヘン
+                </label><br />
+                <label>
+                    <input type="radio" name="q16" value="C" />
+                    C. ちくわぶ
+                </label><br />
+                <label>
+                    <input type="radio" name="q16" value="D" />
+                    D. カブトムシのゼリー
+                </label>
+            </div>
+
+            <div class="question-block">
+                <h3>Q17. ギャンカスではないのは誰か（配点: 1点）</h3>
+                <label>
+                    <input type="radio" name="q17" value="A" />
+                    A. タマナシ
+                </label><br />
+                <label>
+                    <input type="radio" name="q17" value="B" />
+                    B. DETLA
+                </label><br />
+                <label>
+                    <input type="radio" name="q17" value="C" />
+                    C. チンパン・クラップ
+                </label><br />
+                <label>
+                    <input type="radio" name="q17" value="D" />
+                    D. ペラップ
+                </label>
+            </div>
+
+            <div class="question-block">
+                <h3>Q18. 表示が自動で閉じられないように大きく表示したいときのMFM表現はどれか（配点: 1点）</h3>
+                <label>
+                    <input type="radio" name="q18" value="A" />
+                    A. x2
+                </label><br />
+                <label>
+                    <input type="radio" name="q18" value="B" />
+                    B. scale.x=2,y=2
+                </label><br />
+                <label>
+                    <input type="radio" name="q18" value="C" />
+                    C. tada.speed=0s
+                </label>
+            </div>
+
+            <div class="question-block">
+                <h3>Q19. レジスタンスの首謀者は誰か（配点: 4点）</h3>
+                <label>
+                    <input type="radio" name="q19" value="A" />
+                    A. くちばし
+                </label><br />
+                <label>
+                    <input type="radio" name="q19" value="B" />
+                    B. 渡鴉
+                </label><br />
+                <label>
+                    <input type="radio" name="q19" value="C" />
+                    C. 塩ポテト君
+                </label><br />
+                <label>
+                    <input type="radio" name="q19" value="D" />
+                    D. ナス
+                </label>
+            </div>
+
+            <div class="question-block">
+                <h3>Q20. ポテト君は（配点: 1点）</h3>
+                <label>
+                    <input type="radio" name="q20" value="A" />
+                    A. かわいい
+                </label>
+            </div>
+
+            <button type="button" id="btnScore">採点</button>
+        </form>
+
+        <div id="resultArea" style="display: none; margin-top: 1rem;">
+            <h3>採点結果</h3>
+            <p id="scoreText"></p>
+            <p id="judgementText"></p>
+
+            <!-- ▼ SNSシェア用リンク-->
+            <p>
+                <a href="#" id="shareLink" target="_blank" rel="noopener noreferrer">結果をSNSでシェアする</a>
+            </p>
+        </div>
+
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="index.html" class="stick-regular">トップ</a></li>
+            <li><a href="about.html" class="stick-regular">学校紹介</a></li>
+            <li><a href="departments.html" class="stick-regular">学科紹介</a></li>
+            <li><a href="school_life.html" class="stick-regular">スクールライフ</a></li>
+            <li><a href="staff.html" class="stick-regular">教職員紹介</a></li>
+            <li><a href="prospective_students.html" class="stick-regular">受験生の方へ</a></li>
+            <li><a href="faculty.html" class="stick-regular">教職員・在校生の方へ</a></li>
+        </ul>
+        <p>&copy; 2025 すしすきー大学</p>
+        <p>※このサイトはジョークサイトです。実在の大学とは関係ありません。</p>
+    </footer>
+
+    <script>
+        /* ---------------------------------------
+           過去問ページのスクリプト
+        ----------------------------------------- */
+
+        /* 1) 各問題の正解と配点を定義する（自由に増減OK） */
+        const ANSWERS = [
+            // questionName, correctAnswer, score
+            { name: 'q1', correct: 'C', point: 100 },
+            { name: 'q2', correct: 'A', point: 2 },
+            { name: 'q3', correct: 'B', point: 1 },
+            { name: 'q4', correct: 'A', point: 2 },
+            { name: 'q5', correct: 'D', point: 1 },
+            { name: 'q6', correct: 'A', point: 2 },
+            { name: 'q7', correct: 'B', point: 2 },
+            { name: 'q8', correct: 'B', point: 1 },
+            { name: 'q9', correct: 'D', point: 1 },
+            { name: 'q10', correct: 'C', point: 2 },
+            { name: 'q11', correct: 'D', point: 2 },
+            { name: 'q12', correct: 'B', point: 1 },
+            { name: 'q13', correct: 'A', point: 1 },
+            { name: 'q14', correct: 'A', point: 1 },
+            { name: 'q15', correct: 'B', point: 2 },
+            { name: 'q16', correct: 'C', point: 2 },
+            { name: 'q17', correct: 'A', point: 1 },
+            { name: 'q18', correct: 'C', point: 1 },
+            { name: 'q19', correct: 'D', point: 4 },
+            { name: 'q20', correct: 'A', point: 1 },
+        ];
+
+        // 合格基準(例: 合計が4点以上なら合格)
+        const PASS_THRESHOLD = 118;
+
+        /* 2) 採点ボタン押下時の処理 */
+        document.getElementById('btnScore').addEventListener('click', () => {
+            const form = document.getElementById('examForm');
+            let totalScore = 0;
+            let maxScore = 0;
+
+            // ANSWERS配列をループして採点
+            ANSWERS.forEach(item => {
+                const { name, correct, point } = item;
+                maxScore += point;
+
+                // ラジオボタンの選択値を取得
+                const selected = form.querySelector(`input[name="${name}"]:checked`);
+                if (selected && selected.value === correct) {
+                    totalScore += point;
+                }
+            });
+
+            // 合否判定
+            let judgement = '';
+            if (totalScore >= PASS_THRESHOLD) {
+                judgement = '合格です！おめでとうございます！';
+            } else {
+                judgement = '残念！不合格です。再チャレンジをお待ちしています。';
+            }
+
+            // 結果表示
+            document.getElementById('scoreText').textContent =
+                `あなたの得点： ${totalScore} / ${maxScore} 点`;
+            document.getElementById('judgementText').textContent = judgement;
+
+            // シェア用リンクを更新 (例：Twitterのintentリンクを生成)
+            const tweetText = encodeURIComponent(
+                `#すしすきー大学 2024年度一般試験過去問(塩ポテト君作)\n得点：${totalScore}/${maxScore}\n${judgement}`
+            );
+            const tweetUrl = 'https://sushi.ski/share?text=' + tweetText + '&url=https://potatotimekun.github.io/sushiUniversity/exam/past_exam_2024.html';
+            document.getElementById('shareLink').setAttribute('href', tweetUrl);
+
+            // 結果エリアを表示
+            document.getElementById('resultArea').style.display = 'block';
+        });
+    </script>
+
+    <style>
+        main {
+            padding: 1rem;
+        }
+
+        .question-block img {
+            width: 200px;
+        }
+
+        button {
+            margin: 1rem;
+            padding: 1rem;
+            width: 150px;
+            font-size: 1.2rem;
+        }
+    </style>
+
+</body>
+
+</html>

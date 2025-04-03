@@ -10,6 +10,7 @@ header {
     position: relative;
     background-color: #fff;
     padding: 0;
+    border-bottom: 2px solid #333;
 }
 
 header h1 {
@@ -27,9 +28,14 @@ nav ul {
 nav li {
     padding: 10px;
     background-color: #eee;
+    border-right: 1px solid #fdb;
 }
 
 nav li:hover {
+    background-color: #fdb;
+}
+
+nav .is-open {
     background-color: #fdb;
 }
 

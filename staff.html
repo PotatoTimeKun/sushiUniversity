@@ -1,70 +1,188 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <title>すしすきー大学 - 教職員紹介</title>
-  <link rel="stylesheet" href="style.css?ver=0.0">
+  <link rel="stylesheet" href="style.css?ver=0.1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/emblem.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
   <!-- ヘッダー -->
   <header>
     <img class="header-logo" src="assets/logo.png">
     <button class="nav-toggle" aria-label="メニューを開閉">
-        <!-- 見た目を作るための3本線要素。アイコンはspanの数で調整します -->
-        <span class="hamburger bar1"></span>
-        <span class="hamburger bar2"></span>
-        <span class="hamburger bar3"></span>
+      <!-- 見た目を作るための3本線要素。アイコンはspanの数で調整します -->
+      <span class="hamburger bar1"></span>
+      <span class="hamburger bar2"></span>
+      <span class="hamburger bar3"></span>
     </button>
     <nav>
-        <ul>
-            <li><a href="index.html" class="stick-regular">トップ</a></li>
-            <li><a href="about.html" class="stick-regular">学校紹介</a></li>
-            <li><a href="departments.html" class="stick-regular">学科紹介</a></li>
-            <li><a href="school_life.html" class="stick-regular">スクールライフ</a></li>
-            <li><a href="staff.html" class="stick-regular">教職員紹介</a></li>
-            <li><a href="prospective_students.html" class="stick-regular">受験生の方へ</a></li>
-            <li><a href="faculty.html" class="stick-regular">教職員・在校生の方へ</a></li>
-        </ul>
+      <ul>
+        <li><a href="index.html" class="stick-regular">トップ</a></li>
+        <li><a href="about.html" class="stick-regular">学校紹介</a></li>
+        <li><a href="departments.html" class="stick-regular">学科紹介</a></li>
+        <li><a href="school_life.html" class="stick-regular">スクールライフ</a></li>
+        <li class="is-open"><a href="staff.html" class="stick-regular">教職員紹介</a></li>
+        <li><a href="prospective_students.html" class="stick-regular">受験生の方へ</a></li>
+        <li><a href="faculty.html" class="stick-regular">教職員・在校生の方へ</a></li>
+      </ul>
     </nav>
     <!-- ▼ ハンバーガーメニューを開閉するためのJS -->
     <script>
-        const navToggle = document.querySelector('.nav-toggle');
-        const nav = document.querySelector('nav');
+      const navToggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('nav');
 
-        navToggle.addEventListener('click', () => {
-            // メニューの開閉
-            nav.classList.toggle('open');
+      navToggle.addEventListener('click', () => {
+        // メニューの開閉
+        nav.classList.toggle('open');
 
-            // ボタン自体にも .open クラスを付け外し
-            navToggle.classList.toggle('open');
-        });
+        // ボタン自体にも .open クラスを付け外し
+        navToggle.classList.toggle('open');
+      });
     </script>
-</header>
+  </header>
 
   <!-- メインコンテンツ -->
   <main>
-    <h2>準備中</h2>
+    <div class="staff">
+      <img src="assets/staff/kuchibashi.png">
+      <h2>くちばし</h2>
+      <h3>校長 モデレータ</h3>
+      <p>
+        2003年 寿司職人検定 1級 合格<br>
+        2005年 国立大寿司大学 文化寿司科 卒業<br>
+        2005年 アンコリーノ警察署 入署<br>
+        2010年 全国寿司握り大会 優勝<br>
+        2014年 Japan Sushi Company 入社<br>
+        2017年 国際寿司コンクール 味部門 優勝<br>
+        2025年 すしすきー大学 設立
+      </p>
+      <p style="clear: both;"></p>
+    </div>
+    <div class="staff">
+      <img src="assets/staff/izt.png">
+      <h2>イズティ</h2>
+      <h3>副校長 ベジマイト学科長 モデレータ</h3>
+      <p>
+        2014年 国際ベジマイト認定士 合格<br>
+        2015年 Australia Vegimite University 卒業<br>
+        2017年 モデラジ社 設立<br>
+        2024年 モデラジ社 課金によって倒産<br>
+        2025年 すしすきー大学 副校長 就任
+      </p>
+      <p style="clear: both;"></p>
+    </div>
+    <div class="staff">
+      <h2>シマエナガ</h2>
+      <h3>アンコリーノ学科長 モデレータ</h3>
+      <p style="clear: both;"></p>
+    </div>
+    <div class="staff">
+      <h2>せせせ</h2>
+      <h3>総合すし学科長 モデレータ</h3>
+      <p style="clear: both;"></p>
+    </div>
+    <div class="staff">
+      <h2>てくてく</h2>
+      <h3>すしデザイン学科長 モデレータ</h3>
+      <p style="clear: both;"></p>
+    </div>
+    <div class="staff">
+      <h2>ふるふる</h2>
+      <h3>すし技術科学科長 モデレータ</h3>
+      <p style="clear: both;"></p>
+    </div>
+    <div class="staff">
+      <h2>なずな、しゅいろ、こんこんたんぬもろて、兎亜</h2>
+      <h3>モデレータ</h3>
+      <p style="clear: both;"></p>
+    </div>
+    <div class="staff">
+      <img src="assets/staff/potato.png">
+      <h2>塩ポテト</h2>
+      <h3>教授(マセイモ工学、無料回収学)</h3>
+      <p>
+        2020年 認定にゃんぷっぷー無料回収士 合格<br>
+        2021年 にゃんぷっぷー飼育者試験 合格<br>
+        2023年 国立芋大学 無料回収科 卒業<br>
+        2023年 MASEIMO PROJECT 設立
+      </p>
+      <p style="clear: both;"></p>
+    </div>
+    <div class="staff">
+      <img src="assets/staff/nyap.png">
+      <h2>にゃんぷっぷー</h2>
+      <h3>准教授(にゃぷにゃにゃ)</h3>
+      <p>
+        2019年 ぷにゃにゃにゃぷにゃ ぷにゃ<br>
+        2021年 にゃにゃーぷにゃにゃ にゃにゃ<br>
+        2024年 にゃんにゃぷにゃん にゃぷ<br>
+        2025年 にゃにゃぷにゃぷにゃ ぷにゃにゃ
+      </p>
+      <p style="clear: both;"></p>
+    </div>
+    <div class="staff">
+      <img src="assets/staff/delta.png">
+      <h2>DELTA</h2>
+      <h3>教授(賞味期限学、パチンコ学)</h3>
+      <p style="clear: both;"></p>
+    </div>
+    <div class="staff">
+      <img src="assets/staff/hanmoza.png">
+      <h2>ハンバーグもぐもぐザウルス</h2>
+      <h3>准教授(ハンバーグ学)</h3>
+      <p style="clear: both;"></p>
+    </div>
+    <p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScmcUZzQ4ndKgLLU4LDNn3XqEak8S3oolFmobR8MAZVaHMQCA/viewform?usp=header" target="_blank" rel="noopener noreferrer">教員採用の応募はこちらから &raquo;</a>
+    </p>
   </main>
 
   <!-- フッター -->
   <footer>
     <ul>
-        <li><a href="index.html" class="stick-regular">トップ</a></li>
-        <li><a href="about.html" class="stick-regular">学校紹介</a></li>
-        <li><a href="departments.html" class="stick-regular">学科紹介</a></li>
-        <li><a href="school_life.html" class="stick-regular">スクールライフ</a></li>
-        <li><a href="staff.html" class="stick-regular">教職員紹介</a></li>
-        <li><a href="prospective_students.html" class="stick-regular">受験生の方へ</a></li>
-        <li><a href="faculty.html" class="stick-regular">教職員・在校生の方へ</a></li>
+      <li><a href="index.html" class="stick-regular">トップ</a></li>
+      <li><a href="about.html" class="stick-regular">学校紹介</a></li>
+      <li><a href="departments.html" class="stick-regular">学科紹介</a></li>
+      <li><a href="school_life.html" class="stick-regular">スクールライフ</a></li>
+      <li><a href="staff.html" class="stick-regular">教職員紹介</a></li>
+      <li><a href="prospective_students.html" class="stick-regular">受験生の方へ</a></li>
+      <li><a href="faculty.html" class="stick-regular">教職員・在校生の方へ</a></li>
     </ul>
     <p>&copy; 2025 すしすきー大学</p>
     <p>※このサイトはジョークサイトです。実在の大学とは関係ありません。</p>
-</footer>
+  </footer>
+
+  <style>
+    .staff {
+      background-color: antiquewhite;
+      position: relative;
+      margin-top: 2rem;
+      padding: 1rem 0;
+    }
+
+    .staff img {
+      float: right;
+      width: 400px;
+      max-width: 80%;
+      margin: 10px 50px;
+      border-radius: 15px;
+    }
+
+    .staff p,
+    .staff h2,
+    .staff h3 {
+      margin: 1rem;
+    }
+  </style>
 
 </body>
+
 </html>

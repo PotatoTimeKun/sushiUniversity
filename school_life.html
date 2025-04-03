@@ -2,9 +2,10 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>すしすきー大学 - スクールライフ紹介</title>
-  <link rel="stylesheet" href="style.css?ver=0.0">
+  <title>すしすきー大学 - スクールライフ</title>
+  <link rel="stylesheet" href="style.css?ver=0.1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/emblem.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
@@ -25,7 +26,7 @@
             <li><a href="index.html" class="stick-regular">トップ</a></li>
             <li><a href="about.html" class="stick-regular">学校紹介</a></li>
             <li><a href="departments.html" class="stick-regular">学科紹介</a></li>
-            <li><a href="school_life.html" class="stick-regular">スクールライフ</a></li>
+            <li class="is-open"><a href="school_life.html" class="stick-regular">スクールライフ</a></li>
             <li><a href="staff.html" class="stick-regular">教職員紹介</a></li>
             <li><a href="prospective_students.html" class="stick-regular">受験生の方へ</a></li>
             <li><a href="faculty.html" class="stick-regular">教職員・在校生の方へ</a></li>
@@ -48,7 +49,51 @@
 
   <!-- メインコンテンツ -->
   <main>
-    <h2>準備中</h2>
+    <h1>学校での1日</h1>
+    <div class="intro" style="background-color: #fff0df">
+      <img src="assets/schoollife/nigiri.jpg" class="left-float">
+      <h2>8:30 朝の1握り</h2>
+      <p>学生と職員が集まってその日のすし作品を1つ作ります。</p>
+      <p style="clear: both;"></p>
+    </div>
+    <div class="intro" style="background-color: #fff0df">
+      <img src="assets/schoollife/study.jpg" class="right-float">
+      <h2>9:30 午前の授業</h2>
+      <p>各学生がそれぞれの選択した講義を受けます。</p>
+      <p style="clear: both;"></p>
+    </div>
+    <div class="intro" style="background-color: #fff0df">
+      <img src="assets/schoollife/masenaru.png" class="left-float">
+      <h2>12:00 昼休憩</h2>
+      <p>学食では寿司やアンコリーノ、ベジマイト、マセドナルドなど様々な食事が出来ます。</p>
+      <p style="clear: both;"></p>
+    </div>
+    <div class="intro" style="background-color: #fff0df">
+      <img src="assets/about/note.png" class="right-float">
+      <h2>13:00 午後の授業</h2>
+      <p>4年生では卒業すし握りなども行います。</p>
+      <p style="clear: both;"></p>
+    </div>
+    <div class="intro" style="background-color: #fff0df">
+      <img src="assets/schoollife/kaishu.png" class="left-float">
+      <h2>16:00 サークル活動</h2>
+      <p>無料回収サークルやレジスタンス愛好会など、様々なサークルがあります。</p>
+      <p style="clear: both;"></p>
+    </div>
+    <hr>
+    <h1>イベント</h1>
+    <h2>4月</h2>
+    <p>入学式 - 新入生にすしバッジが送られます。</p>
+    <h2>5月</h2>
+    <p>すし配布ボランティア - 公園やイベント会場などで無料ですしを配布します。</p>
+    <h2>7月</h2>
+    <p>大すし祭 - 2年に1度、各クラスから出し物をします。</p>
+    <h2>9月</h2>
+    <p>すし大会 - すしで競います。</p>
+    <h2>11月</h2>
+    <p>海外旅行 - 海外で最先端のすしに触れます。</p>
+    <h2>2月</h2>
+    <p>卒業すし発表会 - 4年生が卒業すし研究の発表をします。</p>
   </main>
 
   <!-- フッター -->
@@ -65,6 +110,42 @@
     <p>&copy; 2025 すしすきー大学</p>
     <p>※このサイトはジョークサイトです。実在の大学とは関係ありません。</p>
 </footer>
+
+<style>
+  h1,h2,p {
+    margin: 1rem;
+  }
+
+  .intro {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+
+    .intro img {
+      width: 400px;
+      max-width: 100%;
+    }
+
+    .left-float {
+      float: left;
+      margin-right: 10px;
+    }
+
+    .right-float {
+      float: right;
+      margin-left: 10px;
+    }
+
+    @media screen and (max-width:410px) {
+      .left-float {
+        margin-right: 0;
+      }
+
+      .right-float {
+        margin-left: 0;
+      }
+    }
+</style>
 
 </body>
 </html>

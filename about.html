@@ -1,70 +1,186 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <title>すしすきー大学 - 学校紹介</title>
-  <link rel="stylesheet" href="style.css?ver=0.0">
+  <link rel="stylesheet" href="style.css?ver=0.1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/emblem.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Stick&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
   <!-- ヘッダー -->
   <header>
     <img class="header-logo" src="assets/logo.png">
     <button class="nav-toggle" aria-label="メニューを開閉">
-        <!-- 見た目を作るための3本線要素。アイコンはspanの数で調整します -->
-        <span class="hamburger bar1"></span>
-        <span class="hamburger bar2"></span>
-        <span class="hamburger bar3"></span>
+      <!-- 見た目を作るための3本線要素。アイコンはspanの数で調整します -->
+      <span class="hamburger bar1"></span>
+      <span class="hamburger bar2"></span>
+      <span class="hamburger bar3"></span>
     </button>
     <nav>
-        <ul>
-            <li><a href="index.html" class="stick-regular">トップ</a></li>
-            <li><a href="about.html" class="stick-regular">学校紹介</a></li>
-            <li><a href="departments.html" class="stick-regular">学科紹介</a></li>
-            <li><a href="school_life.html" class="stick-regular">スクールライフ</a></li>
-            <li><a href="staff.html" class="stick-regular">教職員紹介</a></li>
-            <li><a href="prospective_students.html" class="stick-regular">受験生の方へ</a></li>
-            <li><a href="faculty.html" class="stick-regular">教職員・在校生の方へ</a></li>
-        </ul>
-    </nav>
-    <!-- ▼ ハンバーガーメニューを開閉するためのJS -->
-    <script>
-        const navToggle = document.querySelector('.nav-toggle');
-        const nav = document.querySelector('nav');
-
-        navToggle.addEventListener('click', () => {
-            // メニューの開閉
-            nav.classList.toggle('open');
-
-            // ボタン自体にも .open クラスを付け外し
-            navToggle.classList.toggle('open');
-        });
-    </script>
-</header>
-
-  <!-- メインコンテンツ -->
-  <main>
-    <h2>準備中</h2>
-  </main>
-
-  <!-- フッター -->
-  <footer>
-    <ul>
+      <ul>
         <li><a href="index.html" class="stick-regular">トップ</a></li>
-        <li><a href="about.html" class="stick-regular">学校紹介</a></li>
+        <li class="is-open"><a href="about.html" class="stick-regular">学校紹介</a></li>
         <li><a href="departments.html" class="stick-regular">学科紹介</a></li>
         <li><a href="school_life.html" class="stick-regular">スクールライフ</a></li>
         <li><a href="staff.html" class="stick-regular">教職員紹介</a></li>
         <li><a href="prospective_students.html" class="stick-regular">受験生の方へ</a></li>
         <li><a href="faculty.html" class="stick-regular">教職員・在校生の方へ</a></li>
+      </ul>
+    </nav>
+    <!-- ▼ ハンバーガーメニューを開閉するためのJS -->
+    <script>
+      const navToggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('nav');
+
+      navToggle.addEventListener('click', () => {
+        // メニューの開閉
+        nav.classList.toggle('open');
+
+        // ボタン自体にも .open クラスを付け外し
+        navToggle.classList.toggle('open');
+      });
+    </script>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main>
+    <div class="top-div">
+      <img src="assets/emblem.png">
+      <h2 class="stick-regular">「見て、握って、食べる。」</h2>
+    </div>
+    <div class="story">
+      <img src="assets/staff/kuchibashi.png">
+      <h2>くちばし校長のお言葉</h2>
+      <p>
+        &emsp;すしすきー大学は2025年に開校された、今までとは違う新しい学校です。弊校では、1日1寿司握りを目標として
+        毎日生徒と職員で寿司を握っています。日々の寿司重ねを通して、新時代を切り開く寿司を生み出すことを望んでいます。<br>
+        &emsp;アンコリーノ寿司はその中でも傑作で、毎年試食会や町内での無料提供ボランティアなどを行っています。
+        寿司の素晴らしさを広め、発展させていくような学校にしていければと思っております。
+      </p>
+      <p style="clear: both;"></p>
+    </div>
+    <div class="intro" style="background-color: #dff3ff">
+      <img src="assets/about/room.png" class="left-float">
+      <h2 class="kaisei-decol-regular">最新の設備を搭載したすし調理室</h2>
+      <p>すし調理に特化した専用の教室ではどんな寿司でも作ることが出来ます。</p>
+      <p style="clear: both;"></p>
+    </div>
+    <div class="intro" style="background-color: #ffdfe7">
+      <img src="assets/about/device.png" class="right-float">
+      <h2 class="kaisei-decol-regular">1人1台寿司デバイスの無償配布</h2>
+      <p>すし学習に最適な寿司デバイスを1人1台、無償で配布します。</p>
+      <p style="clear: both;"></p>
+    </div>
+    <div class="intro" style="background-color: #e0ffdf">
+      <img src="assets/about/note.png" class="left-float">
+      <h2 class="kaisei-decol-regular">幅広い教育内容</h2>
+      <p>すし学を始め、アンコリーノ学、マセイモ研究なども行えます。</p>
+      <p style="clear: both;"></p>
+    </div>
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <ul>
+      <li><a href="index.html" class="stick-regular">トップ</a></li>
+      <li><a href="about.html" class="stick-regular">学校紹介</a></li>
+      <li><a href="departments.html" class="stick-regular">学科紹介</a></li>
+      <li><a href="school_life.html" class="stick-regular">スクールライフ</a></li>
+      <li><a href="staff.html" class="stick-regular">教職員紹介</a></li>
+      <li><a href="prospective_students.html" class="stick-regular">受験生の方へ</a></li>
+      <li><a href="faculty.html" class="stick-regular">教職員・在校生の方へ</a></li>
     </ul>
     <p>&copy; 2025 すしすきー大学</p>
     <p>※このサイトはジョークサイトです。実在の大学とは関係ありません。</p>
-</footer>
+  </footer>
+
+  <style>
+    .kaisei-decol-regular {
+      font-family: "Kaisei Decol", serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .top-div img {
+      width: 400px;
+      max-width: 80%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .top-div h2 {
+      width: 100%;
+      text-align: center;
+      margin: 0;
+    }
+
+    .story {
+      background-color: antiquewhite;
+      position: relative;
+      margin-top: 2rem;
+      padding: 1rem 0;
+    }
+
+    .story img {
+      float: right;
+      width: 400px;
+      max-width: 80%;
+      margin: 10px 50px;
+      border-radius: 15px;
+    }
+
+    .story p,
+    h2 {
+      margin: 1rem;
+    }
+
+    .intro h2 {
+      font-size: 2rem;
+    }
+
+    .intro p {
+      font-size: 1.3rem;
+      margin: 1rem;
+    }
+
+    .intro {
+      position: relative;
+      margin-top: 2rem;
+    }
+
+    .intro img {
+      width: 400px;
+      max-width: 100%;
+    }
+
+    .left-float {
+      float: left;
+      margin-right: 10px;
+    }
+
+    .right-float {
+      float: right;
+      margin-left: 10px;
+    }
+
+    @media screen and (max-width:410px) {
+      .left-float {
+        margin-right: 0;
+      }
+
+      .right-float {
+        margin-left: 0;
+      }
+    }
+  </style>
 
 </body>
+
 </html>
