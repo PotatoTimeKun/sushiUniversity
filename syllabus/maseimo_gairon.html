@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>マセイモ概論 - シラバス詳細</title>
+    <link rel="stylesheet" href="../style.css"> <!-- 階層に注意 -->
+    <link rel="stylesheet" href="syllabus_style.css">
+</head>
+
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <img class="header-logo" src="../assets/logo.png">
+        <button class="nav-toggle" aria-label="メニューを開閉">
+            <!-- 見た目を作るための3本線要素。アイコンはspanの数で調整します -->
+            <span class="hamburger bar1"></span>
+            <span class="hamburger bar2"></span>
+            <span class="hamburger bar3"></span>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="../index.html" class="stick-regular">トップ</a></li>
+                <li><a href="../about.html" class="stick-regular">学校紹介</a></li>
+                <li><a href="../departments.html" class="stick-regular">学科紹介</a></li>
+                <li><a href="../school_life.html" class="stick-regular">スクールライフ</a></li>
+                <li><a href="../staff.html" class="stick-regular">教職員紹介</a></li>
+                <li><a href="../prospective_students.html" class="stick-regular">受験生の方へ</a></li>
+                <li><a href="../faculty.html" class="stick-regular">教職員・在校生の方へ</a></li>
+            </ul>
+        </nav>
+        <!-- ▼ ハンバーガーメニューを開閉するためのJS -->
+        <script>
+            const navToggle = document.querySelector('.nav-toggle');
+            const nav = document.querySelector('nav');
+
+            navToggle.addEventListener('click', () => {
+                // メニューの開閉
+                nav.classList.toggle('open');
+
+                // ボタン自体にも .open クラスを付け外し
+                navToggle.classList.toggle('open');
+            });
+        </script>
+    </header>
+
+    <main>
+        <h2>マセイモ概論 - シラバス詳細</h2>
+
+        <section class="syllabus-detail">
+            <h3>授業情報</h3>
+            <p><strong>科目名:</strong> マセイモ概論</p>
+            <p><strong>担当教員:</strong> 塩ポテト教授 , AIポテト教授 , AIポテト教授 , AIポテト教授 , AIポテト教授</p>
+            <p><strong>開講時期:</strong> 前期 (週1回1コマ、全15回)</p>
+            <p><strong>学年:</strong> 1年生</p>
+            <p><strong>対象学科:</strong> 全学科</p>
+            <p><strong>科目分類:</strong> 必修 </p>
+            <p><strong>単位数:</strong> 1 </p>
+        </section>
+
+        <section class="syllabus-detail">
+            <h3>授業概要</h3>
+            <p>マセイモの起源から現在に至るまでの歴史を概観し、マセイモごとの違いやプログラムの仕様を理解する。</p>
+        </section>
+
+        <section class="syllabus-detail">
+            <h3>到達目標</h3>
+            <ul>
+                <li>マセイモの歴史的変遷を説明できる</li>
+                <li>マセイモの行動を理解できる</li>
+            </ul>
+        </section>
+
+        <section class="syllabus-detail">
+            <h3>授業計画</h3>
+            <ol>
+                <li>オリエンテーション、マセイモの定義とは</li>
+                <li>初期マセイモの誕生と目的</li>
+                <li>マセイモ開発の流れ</li>
+                <li>マセイモの機能</li>
+                <li>マセイモを動かすプログラム</li>
+
+                <li>マセイモを動かすプログラム 2</li>
+                <li>マセイモとマルコフ連鎖</li>
+                <li>マセイモ稼働実験</li>
+                <li>マセイモの名言</li>
+                <li>様々なマセイモ</li>
+
+                <li>マセイモとSAV財団</li>
+                <li>マセイモナールの発明と効果</li>
+                <li>マセイモ体験実習</li>
+                <li>マセイモの今後</li>
+                <li>期末試験・まとめ</li>
+            </ol>
+        </section>
+
+        <section class="syllabus-detail">
+            <h3>成績評価方法</h3>
+            <p>レポート（50%）＋筆記試験（50%）</p>
+        </section>
+
+        <section class="syllabus-detail">
+            <h3>使用テキスト・参考文献</h3>
+            <ul>
+                <li>『よく分かる！マセイモの仕組み』無料回収出版</li>
+                <li>『マセイモ文化史』MASEIMO PROJECT社</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 すしすきー大学</p>
+        <p>※このサイトはジョークサイトです。実在の大学とは関係ありません。</p>
+    </footer>
+
+</body>
+
+</html>

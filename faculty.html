@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8">
   <title>すしすきー大学 - 教職員・在校生の方へ</title>
@@ -10,62 +11,127 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
   <!-- ヘッダー -->
   <header>
     <img class="header-logo" src="assets/logo.png">
     <button class="nav-toggle" aria-label="メニューを開閉">
-        <!-- 見た目を作るための3本線要素。アイコンはspanの数で調整します -->
-        <span class="hamburger bar1"></span>
-        <span class="hamburger bar2"></span>
-        <span class="hamburger bar3"></span>
+      <!-- 見た目を作るための3本線要素。アイコンはspanの数で調整します -->
+      <span class="hamburger bar1"></span>
+      <span class="hamburger bar2"></span>
+      <span class="hamburger bar3"></span>
     </button>
     <nav>
-        <ul>
-            <li><a href="index.html" class="stick-regular">トップ</a></li>
-            <li><a href="about.html" class="stick-regular">学校紹介</a></li>
-            <li><a href="departments.html" class="stick-regular">学科紹介</a></li>
-            <li><a href="school_life.html" class="stick-regular">スクールライフ</a></li>
-            <li><a href="staff.html" class="stick-regular">教職員紹介</a></li>
-            <li><a href="prospective_students.html" class="stick-regular">受験生の方へ</a></li>
-            <li class="is-open"><a href="faculty.html" class="stick-regular">教職員・在校生の方へ</a></li>
-        </ul>
-    </nav>
-    <!-- ▼ ハンバーガーメニューを開閉するためのJS -->
-    <script>
-        const navToggle = document.querySelector('.nav-toggle');
-        const nav = document.querySelector('nav');
-
-        navToggle.addEventListener('click', () => {
-            // メニューの開閉
-            nav.classList.toggle('open');
-
-            // ボタン自体にも .open クラスを付け外し
-            navToggle.classList.toggle('open');
-        });
-    </script>
-</header>
-
-  <!-- メインコンテンツ -->
-  <main>
-    <h2>準備中</h2>
-  </main>
-
-  <!-- フッター -->
-  <footer>
-    <ul>
+      <ul>
         <li><a href="index.html" class="stick-regular">トップ</a></li>
         <li><a href="about.html" class="stick-regular">学校紹介</a></li>
         <li><a href="departments.html" class="stick-regular">学科紹介</a></li>
         <li><a href="school_life.html" class="stick-regular">スクールライフ</a></li>
         <li><a href="staff.html" class="stick-regular">教職員紹介</a></li>
         <li><a href="prospective_students.html" class="stick-regular">受験生の方へ</a></li>
-        <li><a href="faculty.html" class="stick-regular">教職員・在校生の方へ</a></li>
+        <li class="is-open"><a href="faculty.html" class="stick-regular">教職員・在校生の方へ</a></li>
+      </ul>
+    </nav>
+    <!-- ▼ ハンバーガーメニューを開閉するためのJS -->
+    <script>
+      const navToggle = document.querySelector('.nav-toggle');
+      const nav = document.querySelector('nav');
+
+      navToggle.addEventListener('click', () => {
+        // メニューの開閉
+        nav.classList.toggle('open');
+
+        // ボタン自体にも .open クラスを付け外し
+        navToggle.classList.toggle('open');
+      });
+    </script>
+  </header>
+
+  <main>
+    <h2 style="margin-left: 1rem;">シラバス一覧</h2>
+    <p style="margin-left: 1rem;">当大学の各学科で開講される科目のシラバス情報です。</p>
+
+    <!-- すし学科セクション -->
+    <section class="syllabus-section">
+      <h3>全学科共通</h3>
+
+      <!-- 科目ごとにカード/テーブルで紹介 -->
+      <article class="course-card">
+        <h4>マセイモ概論</h4>
+        <p><strong>担当:</strong> 塩ポテト教授 , AIポテト教授 , AIポテト教授 , AIポテト教授 , AIポテト教授 </p>
+        <p><strong>開講時期:</strong> 1年生前期</p>
+        <p><strong>概要:</strong> マセイモが生まれた背景やその仕組み、マセイモごとの特徴などを学ぶ。</p>
+        <!-- シラバス詳細ページリンク or PDFリンク -->
+        <p><a href="syllabus/maseimo_gairon.html">詳細を見る &raquo;</a></p>
+        <!-- あるいはPDFダウンロードリンクなど -->
+        <!-- <p><a href="pdf/sushi_history_syllabus.pdf" target="_blank" rel="noopener">PDFダウンロード</a></p> -->
+      </article>
+
+      <!-- 他の科目も同様に... -->
+    </section>
+
+    <!-- 他の学科も同様に... -->
+
+    <h3 style="margin-left: 1rem;">教員各位へ</h3>
+    <p style="margin-left: 1rem;">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScmcUZzQ4ndKgLLU4LDNn3XqEak8S3oolFmobR8MAZVaHMQCA/viewform?usp=header" target="_blank" rel="noopener noreferrer">シラバス追加・更新はこちらから &raquo;</a>
+    </p>
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <ul>
+      <li><a href="index.html" class="stick-regular">トップ</a></li>
+      <li><a href="about.html" class="stick-regular">学校紹介</a></li>
+      <li><a href="departments.html" class="stick-regular">学科紹介</a></li>
+      <li><a href="school_life.html" class="stick-regular">スクールライフ</a></li>
+      <li><a href="staff.html" class="stick-regular">教職員紹介</a></li>
+      <li><a href="prospective_students.html" class="stick-regular">受験生の方へ</a></li>
+      <li><a href="faculty.html" class="stick-regular">教職員・在校生の方へ</a></li>
     </ul>
     <p>&copy; 2025 すしすきー大学</p>
     <p>※このサイトはジョークサイトです。実在の大学とは関係ありません。</p>
-</footer>
+  </footer>
+
+  <style>
+    /* シラバス一覧ページ全体を軽く装飾 */
+    .syllabus-section {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      border-radius: 4px;
+    }
+
+    .syllabus-section h3 {
+      margin-top: 0;
+      font-size: 1.4rem;
+    }
+
+    .course-card {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      margin-bottom: 1rem;
+      padding: 1rem;
+      border-radius: 4px;
+    }
+
+    .course-card h4 {
+      margin-top: 0;
+      font-size: 1.2rem;
+    }
+
+    .course-card a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+
+    .course-card a:hover {
+      text-decoration: underline;
+    }
+  </style>
 
 </body>
+
 </html>
