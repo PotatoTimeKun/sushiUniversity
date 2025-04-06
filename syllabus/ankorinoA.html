@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>アンコリーノ論A - シラバス詳細</title>
+    <link rel="stylesheet" href="../style.css"> <!-- 階層に注意 -->
+    <link rel="stylesheet" href="syllabus_style.css">
+</head>
+
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <img class="header-logo" src="../assets/logo.png">
+        <button class="nav-toggle" aria-label="メニューを開閉">
+            <!-- 見た目を作るための3本線要素。アイコンはspanの数で調整します -->
+            <span class="hamburger bar1"></span>
+            <span class="hamburger bar2"></span>
+            <span class="hamburger bar3"></span>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="../index.html" class="stick-regular">トップ</a></li>
+                <li><a href="../about.html" class="stick-regular">学校紹介</a></li>
+                <li><a href="../departments.html" class="stick-regular">学科紹介</a></li>
+                <li><a href="../school_life.html" class="stick-regular">スクールライフ</a></li>
+                <li><a href="../staff.html" class="stick-regular">教職員紹介</a></li>
+                <li><a href="../prospective_students.html" class="stick-regular">受験生の方へ</a></li>
+                <li><a href="../faculty.html" class="stick-regular">教職員・在校生の方へ</a></li>
+            </ul>
+        </nav>
+        <!-- ▼ ハンバーガーメニューを開閉するためのJS -->
+        <script>
+            const navToggle = document.querySelector('.nav-toggle');
+            const nav = document.querySelector('nav');
+
+            navToggle.addEventListener('click', () => {
+                // メニューの開閉
+                nav.classList.toggle('open');
+
+                // ボタン自体にも .open クラスを付け外し
+                navToggle.classList.toggle('open');
+            });
+        </script>
+    </header>
+
+    <main>
+        <h2>アンコリーノ論A - シラバス詳細</h2>
+
+        <section class="syllabus-detail">
+            <h3>授業情報</h3>
+            <p><strong>科目名:</strong> アンコリーノ論A</p>
+            <p><strong>担当教員:</strong> くちばし校長</p>
+            <p><strong>開講時期:</strong> 前期 (週1回2コマ、全15回)</p>
+            <p><strong>学年:</strong> 1年生</p>
+            <p><strong>対象学科:</strong> 全学科</p>
+            <p><strong>科目分類:</strong> 必修 </p>
+            <p><strong>単位数:</strong> 2 </p>
+        </section>
+
+        <section class="syllabus-detail">
+            <h3>授業概要</h3>
+            <p>アンコリーノ精神を教育する。</p>
+        </section>
+
+        <section class="syllabus-detail">
+            <h3>到達目標</h3>
+            <ul>
+                <li>アンコリーノの正式名称のみを扱うことができる</li>
+                <li>アンコリーノを信じている</li>
+            </ul>
+        </section>
+
+        <section class="syllabus-detail">
+            <h3>授業計画</h3>
+            <ol>
+                <li>アンコリーノの名称について</li>
+                <li>アンコリーノの名称について2</li>
+                <li>アンコリーノの名称について3</li>
+                <li>アンコリーノ違反者の扱い</li>
+                <li>アンコリーノ違反チェック</li>
+
+                <li>アンコリーノ違反者処罰実習</li>
+                <li>アンコリーノの歴史</li>
+                <li>アンコリーノの教え</li>
+                <li>アンコリーノの素晴らしさ</li>
+                <li>アンコリーノ違反チェック</li>
+
+                <li>アンコリーノと社会</li>
+                <li>国際社会におけるアンコリーノ</li>
+                <li>アンコリーノ教育の重要性</li>
+                <li>アンコリーノを信じよ</li>
+                <li>期末試験・アンコリーノ違反チェック</li>
+            </ol>
+        </section>
+
+        <section class="syllabus-detail">
+            <h3>成績評価方法</h3>
+            <p>レポート30%、プレゼンテーション20%、筆記試験50%</p>
+            <p>アンコリーノ違反チェックで違反を判断されたものは当科目の評点を0点とする。</p>
+        </section>
+
+        <section class="syllabus-detail">
+            <h3>使用テキスト・参考文献</h3>
+            <ul>
+                <li>『アンコリーノ聖書』くちばし</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 すしすきー大学</p>
+        <p>※このサイトはジョークサイトです。実在の大学とは関係ありません。</p>
+    </footer>
+
+</body>
+
+</html>
