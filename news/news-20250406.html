@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>【ニュース詳細】校内の池に『罪を償うナス』 - すしすきー大学</title>
+  <link rel="stylesheet" href="../style.css?ver=0.1"> <!-- 親フォルダにあるCSSを読み込み -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../assets/emblem.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stick&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ヘッダー (共通) -->
+<header>
+    <img class="header-logo" src="../assets/logo.png">
+    <button class="nav-toggle" aria-label="メニューを開閉">
+        <!-- 見た目を作るための3本線要素。アイコンはspanの数で調整します -->
+        <span class="hamburger bar1"></span>
+        <span class="hamburger bar2"></span>
+        <span class="hamburger bar3"></span>
+    </button>
+  <nav>
+    <ul>
+      <li><a href="../index.html" class="stick-regular">トップ</a></li>
+      <li><a href="../about.html" class="stick-regular">学校紹介</a></li>
+      <li><a href="../departments.html" class="stick-regular">学科紹介</a></li>
+      <li><a href="../school_life.html" class="stick-regular">スクールライフ</a></li>
+      <li><a href="../staff.html" class="stick-regular">教職員紹介</a></li>
+      <li><a href="../prospective_students.html" class="stick-regular">受験生の方へ</a></li>
+      <li><a href="../faculty.html" class="stick-regular">教職員・在校生の方へ</a></li>
+    </ul>
+  </nav>
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('nav');
+  
+    navToggle.addEventListener('click', () => {
+      // メニューの開閉
+      nav.classList.toggle('open');
+  
+      // ボタン自体にも .open クラスを付け外し
+      navToggle.classList.toggle('open');
+    });
+  </script>
+</header>
+
+<!-- メインコンテンツ -->
+<main>
+  <article class="news-detail">
+    <h2 class="news-title">校内の池に『罪を償うナス』</h2>
+    <div class="news-meta">
+      <time datetime="2025-04-06">2025年4月6日</time>
+    </div>
+
+    <img src="../assets/news/nasu.webp">
+
+    <p>
+      すしすきー大学の池にオブジェとして『罪を償うナス』の石像が設置されました。<br>
+      この「ナス」は、レジスタンスの首謀者であり、多くの罪を背負いました。しかし、そのようなナスでも、罪を認め、アンコリーノを信じる心があれば、アンコリーノは許してくださる。
+      そういった物語を表現した芸術作品です。
+    </p>
+
+    <p>
+      アンコリーノに、祝福あれ。
+    </p>
+
+    <!-- 記事の最後に戻るリンクなど -->
+    <p>
+      <a href="../index.html">&laquo; トップページへ戻る</a>
+    </p>
+  </article>
+</main>
+
+<!-- フッター (共通) -->
+<footer>
+  <p>&copy; 2025 すしすきー大学</p>
+  <p>※このサイトはジョークサイトです。実在の大学とは関係ありません。</p>
+</footer>
+
+</body>
+</html>
