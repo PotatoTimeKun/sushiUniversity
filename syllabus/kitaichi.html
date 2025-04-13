@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>期待値学入門 - シラバス詳細</title>
+    <link rel="stylesheet" href="../style.css"> <!-- 階層に注意 -->
+    <link rel="stylesheet" href="syllabus_style.css">
+</head>
+
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <img class="header-logo" src="../assets/logo.png">
+        <button class="nav-toggle" aria-label="メニューを開閉">
+            <!-- 見た目を作るための3本線要素。アイコンはspanの数で調整します -->
+            <span class="hamburger bar1"></span>
+            <span class="hamburger bar2"></span>
+            <span class="hamburger bar3"></span>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="../index.html" class="stick-regular">トップ</a></li>
+                <li><a href="../about.html" class="stick-regular">学校紹介</a></li>
+                <li><a href="../departments.html" class="stick-regular">学科紹介</a></li>
+                <li><a href="../school_life.html" class="stick-regular">スクールライフ</a></li>
+                <li><a href="../staff.html" class="stick-regular">教職員紹介</a></li>
+                <li><a href="../prospective_students.html" class="stick-regular">受験生の方へ</a></li>
+                <li><a href="../faculty.html" class="stick-regular">教職員・在校生の方へ</a></li>
+            </ul>
+        </nav>
+        <!-- ▼ ハンバーガーメニューを開閉するためのJS -->
+        <script>
+            const navToggle = document.querySelector('.nav-toggle');
+            const nav = document.querySelector('nav');
+
+            navToggle.addEventListener('click', () => {
+                // メニューの開閉
+                nav.classList.toggle('open');
+
+                // ボタン自体にも .open クラスを付け外し
+                navToggle.classList.toggle('open');
+            });
+        </script>
+    </header>
+
+    <main>
+        <h2>期待値学入門 - シラバス詳細</h2>
+
+        <section class="syllabus-detail">
+            <h3>授業情報</h3>
+            <p><strong>科目名:</strong> 期待値学入門</p>
+            <p><strong>担当教員:</strong> チンパン・クラップ教授</p>
+            <p><strong>開講時期:</strong> 前期 (週1回2コマ、全15回)</p>
+            <p><strong>学年:</strong> 1年生</p>
+            <p><strong>対象学科:</strong> 全学科</p>
+            <p><strong>科目分類:</strong> 選択 </p>
+            <p><strong>単位数:</strong> 2 </p>
+        </section>
+
+        <section class="syllabus-detail">
+            <h3>授業概要</h3>
+            <p>パチンコ屋や公営ギャンブルなどにおける期待値の稼ぎ方を学ぶ。</p>
+        </section>
+
+        <section class="syllabus-detail">
+            <h3>到達目標</h3>
+            <p>
+                期待値学入門を修め、養分を脱却する事で自身のギャンブルとの付き合い方を確立する。
+            </p>
+        </section>
+
+        <section class="syllabus-detail">
+            <h3>授業計画</h3>
+            <ol>
+                <li>期待値学入門ガイダンス&期待値とは(1)</li>
+                <li>期待値とは(2)</li>
+                <li>期待値計算(1)</li>
+                <li>期待値計算(2)</li>
+                <li>期待値計算(3)</li>
+
+                <li>期待値計算(4)</li>
+                <li>日本におけるギャンブルの種別と特徴</li>
+                <li>世界におけるギャンブルの種別と特徴</li>
+                <li>ギャンブルと経済</li>
+                <li>ギャンブル史(1)</li>
+
+                <li>ギャンブル史(2)</li>
+                <li>ギャンブル依存症とは(1)</li>
+                <li>ギャンブル依存症とは(2)</li>
+                <li>ギャンブル依存症とは(3)</li>
+                <li>ギャンブルの危険性&まとめ</li>
+            </ol>
+        </section>
+
+        <section class="syllabus-detail">
+            <h3>成績評価方法</h3>
+            <p>小テスト(45点)、7/7の期末レポート(55点)</p>
+        </section>
+
+        <section class="syllabus-detail">
+            <h3>使用テキスト・参考文献</h3>
+            <p>
+                『 パチスロ必勝ガイド』『 パチンコ必勝ガイド』ガイドワークス、『 週間Gallop』産経新聞社サンスポ総局
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 すしすきー大学</p>
+        <p>※このサイトはジョークサイトです。実在の大学とは関係ありません。</p>
+    </footer>
+
+</body>
+
+</html>
